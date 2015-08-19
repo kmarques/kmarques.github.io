@@ -1,0 +1,97 @@
+<html><head>
+<title>Professory-UnderConstruction Website Template | Home :: W3layouts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://p.w3layouts.com/demos/professory_underconstruction/web/css/style.css" media="all" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var theDaysBox  = $("#numdays");
+	var theHoursBox = $("#numhours");
+	var theMinsBox  = $("#nummins");
+	var theSecsBox  = $("#numsecs");
+	
+	var refreshId = setInterval(function() {
+	  var currentSeconds = theSecsBox.text();
+	  var currentMins    = theMinsBox.text();
+	  var currentHours   = theHoursBox.text();
+	  var currentDays    = theDaysBox.text();
+	  
+	  if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
+	  	// if everything rusn out our timer is done!!
+	  	// do some exciting code in here when your countdown timer finishes
+	  	
+	  } else if(currentSeconds == 0 && currentMins == 0 && currentHours == 0) {
+	  	// if the seconds and minutes and hours run out we subtract 1 day
+	  	theDaysBox.html(currentDays-1);
+	  	theHoursBox.html("23");
+	  	theMinsBox.html("59");
+	  	theSecsBox.html("59");
+	  } else if(currentSeconds == 0 && currentMins == 0) {
+	  	// if the seconds and minutes run out we need to subtract 1 hour
+	  	theHoursBox.html(currentHours-1);
+	  	theMinsBox.html("59");
+	  	theSecsBox.html("59");
+	  } else if(currentSeconds == 0) {
+	  	// if the seconds run out we need to subtract 1 minute
+	  	theMinsBox.html(currentMins-1);
+	  	theSecsBox.html("59");
+	  } else {
+      	theSecsBox.html(currentSeconds-1);
+      }
+   }, 1000);
+});
+</script>
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30027142-1', 'w3layouts.com');
+  ga('send', 'pageview');
+</script>
+<script async="" type="text/javascript" src="http://cdn.fancybar.net/ac/fancybar.js?zoneid=1502&serve=C6ADVKE&placement=w3layouts" id="_fancybar_js"></script>
+
+
+<div class="wrap" style="">
+	<h1>kmarques.github.io</h1>
+<div class="main" style="">
+	<h2>my website is on progressive</h2>
+	<div class="banner">&nbsp;</div><div class="text">
+		<h3>Will' be here soon with a new website,&nbsp;<span>Estimated time remaining...!</span></h3>
+		<div class="clock-ticker">
+			<div class="block">
+				<span class="flip-top" id="numdays">0</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Days</footer>
+			</div>
+			<div class="block">
+				<span class="flip-top" id="numhours">0</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Hours</footer>
+			</div>
+			<div class="block">
+				<span class="flip-top" id="nummins">0</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Mins</footer>
+			</div>
+			<div class="block">
+				<span class="flip-top" id="numsecs">0</span>
+				<span class="flip-btm"></span>
+				<footer class="label">Secs</footer>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="footer">
+</div>
+</div>
+
+
+
+</body></html>
