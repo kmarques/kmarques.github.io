@@ -19,7 +19,9 @@ $(document).ready(function(){
 	  var currentHours   = theHoursBox.text();
 	  var currentDays    = theDaysBox.text();
 	  
-	  if(currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0) {
+	  if((currentSeconds == 0 && currentMins == 0 && currentHours == 0 && currentDays == 0)
+	     || (currentSeconds == '∞' && currentMins == '∞' && currentHours == '∞' && currentDays == '∞')
+          ) {
 	  	// if everything rusn out our timer is done!!
 	  	// do some exciting code in here when your countdown timer finishes
 	  	
